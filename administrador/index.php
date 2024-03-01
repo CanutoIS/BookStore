@@ -1,3 +1,8 @@
+<?php
+    if($_POST) {
+        header('Location:inicio.php');
+    }
+?>
 <!doctype html>
 <html lang="en">
 
@@ -27,7 +32,7 @@
                         Login
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="POST">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Usuario</label>
                                 <input type="text" class="form-control" name='usuario' placeholder="Escribe tu usuario">
