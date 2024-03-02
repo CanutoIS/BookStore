@@ -5,13 +5,16 @@
     $txtImagen = (isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : '';
     $accion = (isset($_POST['accion'])) ? $_POST['accion'] : '';
 
-    echo $txtID.'<br/>';
-    echo $txtNombre.'<br/>';
-    echo $txtImagen.'<br/>';
-    echo $accion.'<br/>';
+    include("../config/bd.php");
 
     switch($accion) {
         case 'Agregar':
+
+            $sentenciaSQL = $conexion->prepare("INSERT INTO libros (nombre, imagen) VALUES (:nombre, :imagen);");
+            $sentenciaSQL->bindParam(':nombre', $txtNombre);
+            $sentenciaSQL->bindParam(':imagen', $txtImagen);
+            $sentenciaSQL->execute();
+
             echo 'Presionado botón agregar';
             break;
         case 'Modificar':
