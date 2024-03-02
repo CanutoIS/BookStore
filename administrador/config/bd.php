@@ -6,12 +6,7 @@
 
     try {
         $conexion = new PDO("mysql:host=$host;dbname=$bd",$usuario,$contraseña);
-
-        if($conexion) echo "Conectado... a sistema.<br/>";
-
-
     } catch (Exception $ex) {
         echo $ex->getMessage();
-        echo $ex;
     }
 ?>
