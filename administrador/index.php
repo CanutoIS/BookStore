@@ -58,7 +58,10 @@
                                 <label for="exampleInputPassword1">Contraseña:</label>
                                 <input type="password" class="form-control" name="contraseña" placeholder="Escribe tu contraseña">
                             </div>
-                            <button type="submit" class="btn btn-primary">Entrar al administrador</button>
+                            <div class="d-flex justify-content-between">
+                                <button type="submit" class="btn btn-primary col-md-6">Entrar al administrador</button>
+                                <a href="http://localhost/sitioweb/" class="btn btn-danger col-md-5 text-white">Volver a la web</a>
+                            </div>
                         </form>
 
 

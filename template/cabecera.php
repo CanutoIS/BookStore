@@ -21,6 +21,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="nosotros.php">Nosotros</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost/sitioweb/administrador/index.php">Login</a>
+            </li>
         </ul>
     </nav>
 

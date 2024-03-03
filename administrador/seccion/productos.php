@@ -118,7 +118,7 @@ switch ($accion) {
                     <br/>
 
                     <?php if($txtImagen != '') { ?>
-                        <img class="img-thumbnail rounded" src="../../img/<?php echo $txtImagen; ?>" width="50" alt="">
+                        <img class="img-thumbnail rounded" src="../../img/<?php echo $txtImagen; ?>" width="50">
                     <?php } ?>
 
                     <input type="file" class="form-control" name="txtImagen" id="txtImagen" placeholder="ID">
@@ -150,7 +150,7 @@ switch ($accion) {
                     <td><?php echo $libro['id']; ?></td>
                     <td><?php echo $libro['nombre']; ?></td>
                     <td>
-                        <img class="img-thumbnail rounded" src="../../img/<?php echo $libro['imagen']; ?>" width="50" alt="">
+                        <img class="img-thumbnail rounded" src="../../img/<?php echo $libro['imagen']; ?>" width="50">
                     </td>
                     <td>
                         <form method="POST">
