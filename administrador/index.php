@@ -1,6 +1,16 @@
 <?php
+    session_start();
+
+    // Este código es estático, se puede hacer dinámico.
     if($_POST) {
-        header('Location:inicio.php');
+        if($_POST['usuario'] == "Iván" && $_POST['contraseña'] == "sistema") {
+            $_SESSION['usuario'] = "ok";
+            $_SESSION['nombreUsuario'] = "Iván";
+
+            header('Location:inicio.php');
+        } else {
+            $mensaje = "Error: El usuario o contraseña son incorrectos";
+        }
     }
 ?>
 <!doctype html>
@@ -32,6 +42,12 @@
                         Login
                     </div>
                     <div class="card-body">
+                        <?php if(isset($mensaje)) { ?>
+                            <div class="alert alert-danger" role="alert">
+                                <?php echo $mensaje; ?>
+                            </div>
+                        <?php } ?>
+
                         <form method="POST">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Usuario:</label>
